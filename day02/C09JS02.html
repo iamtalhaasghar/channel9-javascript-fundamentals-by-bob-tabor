@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Day 02 of learning Javascript Fundamentals</title>
+        <script type='text/javascript'>
+            function doSomething(){
+                var user_input = document.getElementById('user_input').value;
+
+                if(user_input.length == 0){
+                    alert("You use Windows 10, don't you?");
+                }
+                else{
+                    var main_heading = document.getElementById('main_heading');
+                    main_heading.innerText = user_input;
+                }
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1 id='main_heading'>Javascript is amazing!!</h1>
+        <input type="text" id="user_input">
+        <input type="submit" value="Click me" onclick="doSomething()">
+    </body>
+</html>

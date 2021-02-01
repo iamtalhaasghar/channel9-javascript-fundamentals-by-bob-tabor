@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>BMI Calculator in Javascript</title>
+        <script type="text/javascript">
+            function calculateBmi(){
+                var weight = document.getElementById('weight').value;
+                var height = document.getElementById('height').value;
+                var bmi = weight / (height ** 2);
+                var output = document.getElementById('output');
+                if(isNaN(bmi)){
+                    output.innerText = "I know you are a programmer.";    
+                }else{
+                    output.innerText = "Your bmi is : " + bmi; 
+                }                
+                
+            }
+        </script>
+    </head>
+    <body>
+        <label for="weight">Enter your weight in kilograms: </label>
+        <input type="text" id="weight">
+        <br><br>
+        <label for="height">Enter your height in meters: </label>
+        <input type="text" id="height">
+        <br><br>
+        <input type="submit" value='Find BMI' onclick="calculateBmi();">
+        <hr>
+        <h1 id="output"></h1>
+    </body>
+</html>

@@ -10,8 +10,8 @@
             An example of anonymous function in javascript 
         !-->
         <input type="button" value="Format" onclick="(function(){
-            var paragraph = document.getElementById('paragraph').value;
-            var output = document.getElementById('output');            
+            let paragraph = document.getElementById('paragraph').value;
+            let output = document.getElementById('output');            
             output.innerHTML = paragraph.toLowerCase();
             output.innerHTML += '<hr>' + paragraph.toUpperCase();
             output.innerHTML += '<hr>' + paragraph.bold();

@@ -4,8 +4,8 @@
         <script>
             function runGame(){
                 
-                var user_input = parseInt(document.getElementById('user_input').value);
-                var output = document.getElementById('output');
+                let user_input = parseInt(document.getElementById('user_input').value);
+                let output = document.getElementById('output');
                 
                 if(isNaN(user_input)){
                     output.innerText = "Enter a valid number.";
@@ -21,7 +21,7 @@
                 }
             }
             function setSecretNumber(){
-                var date = new Date();
+                let date = new Date();
                 randomNumber = date.getMilliseconds();
                 console.log(randomNumber)
             }

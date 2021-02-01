@@ -3,10 +3,10 @@
         <title>BMI Calculator in Javascript</title>
         <script type="text/javascript">
             function calculateBmi(){
-                var weight = document.getElementById('weight').value;
-                var height = document.getElementById('height').value;
-                var bmi = weight / (height ** 2);
-                var output = document.getElementById('output');
+                let weight = document.getElementById('weight').value;
+                let height = document.getElementById('height').value;
+                let bmi = weight / (height ** 2);
+                let output = document.getElementById('output');
                 if(isNaN(bmi) || !isFinite(bmi)){
                     output.innerText = "I know you are a programmer and you are really trying to break my script.";    
                 }else{

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Paragraph Formatter</title>
+    </head>
+    <body>
+        <label for="paragraph"></label>
+        <textarea name="" id="paragraph" cols="30" rows="10"></textarea>
+        <br><br>
+        <!--
+            An example of anonymous function in javascript 
+        !-->
+        <input type="button" value="Format" onclick="(function(){
+            var paragraph = document.getElementById('paragraph').value;
+            var output = document.getElementById('output');            
+            output.innerHTML = paragraph.toLowerCase();
+            output.innerHTML += '<hr>' + paragraph.toUpperCase();
+            output.innerHTML += '<hr>' + paragraph.bold();
+            output.innerHTML += '<hr>' + paragraph.italics();
+            output.innerHTML += '<hr>' + paragraph.strike();
+            output.innerHTML += '<hr>' + paragraph.big();
+            output.innerHTML += '<hr>' + paragraph.anchor('this_is_anchor_text');
+        })()">
+        <hr>
+        <p id='output'></p>
+    </body>
+</html>

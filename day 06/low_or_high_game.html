@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Low or High Number Game</title>
+        <script>
+            function runGame(){
+                
+                var user_input = parseInt(document.getElementById('user_input').value);
+                var output = document.getElementById('output');
+                
+                if(isNaN(user_input)){
+                    output.innerText = "Enter a valid number.";
+                }
+                else if (user_input < randomNumber){
+                    output.innerText = user_input + " is LOWER than the secret number.";
+                }
+                else if(user_input > randomNumber){
+                    output.innerText = user_input + " is GREATER than the secret number.";
+                }
+                else{
+                    output.innerText = "You guessed it!! Now Refresh the web page to play again.";
+                }
+            }
+            function setSecretNumber(){
+                var date = new Date();
+                randomNumber = date.getMilliseconds();
+                console.log(randomNumber)
+            }
+        </script>
+    </head>
+    <body onload="setSecretNumber();">
+        <label for="user_input">Enter your guess</label>
+        <input type="text" name="user_input" id="user_input">
+        <br><br>
+        <input type="button" value="Check" onclick="runGame();">
+        <hr>
+        <h1 id="output"></h1>
+    </body>
+</html>

@@ -7,8 +7,8 @@
                 var height = document.getElementById('height').value;
                 var bmi = weight / (height ** 2);
                 var output = document.getElementById('output');
-                if(isNaN(bmi)){
-                    output.innerText = "I know you are a programmer.";    
+                if(isNaN(bmi) || !isFinite(bmi)){
+                    output.innerText = "I know you are a programmer and you are really trying to break my script.";    
                 }else{
                     output.innerText = "Your bmi is : " + bmi; 
                 }                
